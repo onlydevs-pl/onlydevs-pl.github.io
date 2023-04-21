@@ -21,17 +21,17 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bash
 defaults:
   run:
     shell: bash
+    working-directory: src
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.108.0
+      HUGO_VERSION: 0.107.0
     steps:
       - name: Install Hugo CLI
         run: |
